@@ -1,0 +1,50 @@
+author: Gô SHOEMAKE
+collections:
+    entries:
+        output: true
+        permalink: /entry/:title/  #  Use slug to set title
+    general:
+        output: true
+        permalink: /:title/
+    topics:
+        output: true
+        permalink: /topic/:title/  #  Use slug to set title
+        title: Topic
+defaults:
+    -
+        scope:
+            path: ""
+        values:
+            layout: default
+    -
+        scope:
+            path: ""
+            type: entries
+        values:
+            layout: entry
+    -
+        scope:
+            path: ""
+            type: topics
+        values:
+            layout: topic
+description: Information about the Sevensi Language and Culture
+plugins:
+    - jekyll-coffeescript
+    - jekyll-github-metadata
+kramdown:
+    smart_quotes: [apos, apos, quot, quot]
+lang: en
+markdown: kramdown
+permalink: /blog/:categories/:title-0:year:month:day.html
+sass:
+    style: expanded
+sitelinks:
+    - index
+    - topics
+    - guide
+splashes:
+    - Default splashtext!
+timezone: US/Pacific
+title: The Sevensi Encyclopædia
+title_short: 7c

@@ -1,0 +1,13 @@
+{% assign related = "" | split: "" -%}
+{% for slug in page.related -%}
+	{% assign entry = site.entries | where: "slug", slug | first -%}
+	{% if entry %}{% assign related = related | push: entry %}{% endif -%}
+{% endfor -%}
+{% assign related = related | sort_natural: "title" -%}
+
+{% if related.size > 0 %}<nav id="related">
+	{% include heading.html level=3 section="related" text="Related entries" %}
+	<ul>{% for entry in related %}
+		<li> <a class="local" href="{{ entry.url | prepend: site.baseurl }}">{% include title.html of=entry %}</a>{% endfor %}
+	</ul>
+</nav>{% endif -%}

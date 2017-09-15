@@ -1,0 +1,14 @@
+{% assign entries = "" | split: "" -%}
+{% for entry in include.from -%}
+	{% for topic in entry.topics -%}
+		{% if topic == page.slug %}{% assign entries = entries | push: entry %}{% endif -%}
+	{% endfor -%}
+{% endfor -%}
+{% assign entries = entries | sort_natural: "title" -%}
+
+{% if entries.size > 0 %}<nav id="{{ include.id }}">
+	<h3>{{ include.title }}</h3>
+	<ul>{% for entry in entries %}
+		<li> <a class="local" href="{{ entry.url | prepend: site.baseurl }}">{% include title.html of=entry %}</a>{% endfor %}
+	</ul>
+</nav>{% endif -%}

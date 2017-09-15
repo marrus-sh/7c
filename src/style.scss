@@ -1,0 +1,352 @@
+---
+---
+
+//  PRINT  //
+
+$print_white: #faf8f7;
+$print_bright: #dedbd9;
+$print_light: #b8b3b0;
+$print: #948d87;
+$print_medium: #75706a;
+$print_dark: #57534c;
+$print_dim: #302f2b;
+$print_black: #1f1a14;
+
+//  PASTELS  //
+
+$pastel_red: #b01c1c;
+$pastel_orange: #d15919;
+$pastel_gold: #eb9100;
+$pastel_yellow: #fae13e;
+$pastel_green: #50d952;
+$pastel_cyan: #1aaceb;
+$pastel_blue: #4b2df7;
+$pastel_pink: #f56e97;
+
+html {
+	$background_stroke_string: "%23" + str_slice("#{$print_light}", 2);
+	margin: 0;
+	padding: 0;
+	color: $print_black;
+	background: url("data:image/svg+xml,<?xml version='1.0' standalone='no'?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 3' version='1.1'><line x1='0' y1='1' x2='1' y2='0' stroke='#{$background_stroke_string}' stroke-linecap='square' stroke-width='1'/><line x1='1' y1='3' x2='3' y2='1' stroke='#{$background_stroke_string}' stroke-linecap='square' stroke-width='1'/></svg>") top left / 2.125px repeat, $print_bright;
+	font: large/1.35 "Junicode", serif;
+	font-variant-numeric: oldstyle-nums;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	& > header {
+		display: block;
+		margin: 0;
+		border-bottom: medium $print_dark solid;
+		padding: .35em .5em;
+		background: $print_white;
+		font: 900 x-large/1.2 "Source Sans Pro", sans-serif;
+		text-transform: uppercase;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+
+		h1 {
+			display: inline;
+			margin: 0;
+			padding: 0;
+			font: inherit;
+		}
+
+		nav {
+			display: block;
+			float: right;
+			margin: 0;
+			border: none;
+			padding: 0;
+			max-width: 100%;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+	}
+
+	& > main {
+		display: block;
+		margin: 1rem;
+		border: none;
+		padding: 0;
+
+		& > article {
+			display: block;
+			margin: auto;
+			border: thin $print_medium solid;
+			padding: 2rem;
+			max-width: 31em;
+			background: $print_white;
+			text-align: justify;
+
+			article {
+				display: block;
+				clear: both;
+				margin: 0;
+				border: thin $print solid;
+				padding: 1rem;
+			}
+
+			aside {
+				display: block;
+				margin: 0;
+				border: none;
+				padding: 0 1rem;
+				color: $print_dark;
+				font: italic medium/1.35 "Junicode", serif;
+				overflow: auto;
+			}
+
+			header {
+				display: block;
+				clear: both;
+				margin: -1rem -1.5rem 1.5rem;
+				border-style: none none dashed;
+				border-color: $print;
+				border-width: 0 0 thin;
+				border-bottom: thin $print dashed;
+				padding: 0 .75rem 1em;
+
+				h2 {
+					display: block;
+					margin: 0;
+					border: none;
+					padding: 0;
+					font: bold small-caps xx-large/1 "Junicode", serif;
+					text-align: left;
+				}
+
+				p {
+					display: block;
+					margin: 0;
+					border: none;
+					padding: 0;
+					color: $print;
+					font: 300 medium/1.2 "Source Sans Pro", sans-serif;
+				}
+			}
+
+			footer {
+				display: block;
+				clear: both;
+				margin: 1.5rem -1.5rem -1rem;
+				border-style: dashed none none;
+				border-color: $print;
+				border-width: thin 0 0;
+				padding: 1em .75rem 0;
+				font: italic small/1.35 "Junicode", serif;
+
+				&.copyright {
+					text-align: center;
+				}
+			}
+
+			h3 {
+				display: block;
+				margin: 1em -1rem .75em;
+				border-style: none none solid;
+				border-color: $print_light;
+				border-width: 0 0 thin;
+				padding: 0;
+				font: bold x-large/1.35 "Junicode", serif;
+				text-align: left;
+
+				&::after {
+					content: " :";
+				}
+			}
+
+			h4 {
+				display: block;
+				margin: 1em 0 1ex;
+				border: none;
+				padding: 0;
+				font: bold x-large/1 "Junicode", serif;
+				text-align: left;
+
+				*.text {
+					text-decoration: underline;
+					text-decoration-color: $print_light;
+				}
+			}
+
+			h5 {
+				display: block;
+				margin: .5em 0 0;
+				border: none;
+				padding: 0;
+				font: bold large/1.35 "Junicode", serif;
+				text-align: left;
+
+				&::after {
+					content: ".";
+				}
+			}
+
+			h6 {
+				display: block;
+				margin: .5em 0 0;
+				border: none;
+				padding: 0;
+				font: bold medium/1.35 "Junicode", serif;
+				text-align: left;
+				text-transform: uppercase;
+			}
+
+			nav {
+				display: block;
+				clear: both;
+				margin: 0;
+				border: none;
+				padding: 0;
+
+				&.index {
+					text-align: center;
+					font: medium/1.35 "Junicode", serif;
+				}
+			}
+
+			ol {
+				display: block;
+				margin: 1em 0;
+				border: none;
+				padding: 0 1em 0 2em;
+				list-style: decimal;
+				text-align: left;
+			}
+
+			p {
+				display: block;
+				position: relative;
+				margin: 0;
+				border: none;
+				padding: 0;
+			}
+
+			p + p, h5 + p, h6 + p {
+				text-indent: 2rem;
+
+				&::before {
+					display: block;
+					position: absolute;
+					left: 0;
+					border: none;
+					padding: 0;
+					width: 2rem;
+					color: $print_light;
+					text-align: center;
+					text-indent: 0;
+					content: "¶"
+				}
+			}
+
+			section {
+				display: block;
+				clear: both;
+				margin: 0;
+				border: none;
+				padding: 0;
+			}
+
+			ul {
+				$bullet_fill_string: "%23" + str_slice("#{$print_dim}", 2);
+				display: block;
+				margin: 1em 0;
+				border: none;
+				padding: 0 1em 0 2em;
+				list-style: symbols(cyclic "❧" "†" "‡" "※" "⁂");
+				text-align: left;
+			}
+		}
+	}
+}
+
+a[href] {
+	display: inline;
+	margin: 0;
+	border: none;
+	padding: 0;
+	color: $pastel_cyan;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&.index {
+		color: inherit;
+		font-weight: bold;
+	}
+
+	&.local {
+		color: $pastel_blue;
+	}
+
+	&.no_local {
+		color: $pastel_red;
+	}
+
+	&.section {
+		color: $print_medium;
+		font-weight: normal;
+		text-decoration: none;
+
+		h4 &, h5 &, h6 & {
+			color: $print_light;
+
+			&:hover {
+				color: $print_medium;
+			}
+		}
+	}
+
+	&.sitelink {
+		color: $print_black;
+		font-weight: normal;
+
+		& + & {
+			margin-left: 1em;
+		}
+	}
+
+	&.top {
+		color: $print_black;
+		font-weight: 900;
+		text-decoration: none;
+	}
+
+	&.topic {
+		border: thin transparent solid;
+		border-radius: .25em;
+		padding: 0 .25em;
+		color: $pastel_blue;
+		font-style: normal;
+		text-decoration: none;
+		transition: .15s border-color ease-in-out, .15s background-color ease-in-out;
+
+		&:hover {
+			border: thin rgba($pastel_blue, .85) solid;
+			background: rgba($pastel_blue, .15);
+			transition: .15s border-color, .15s background-color;
+		}
+	}
+}
+
+dfn {
+	font-style: inherit;
+	font-weight: bold;
+}
+
+sub {
+	display: inline-block;
+	margin: 0;
+	border: none;
+	padding: 0;
+	font: italic x-small/1 "Junicode", serif;
+	vertical-align: sub;
+}

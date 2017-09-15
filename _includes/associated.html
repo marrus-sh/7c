@@ -1,0 +1,5 @@
+{% assign entry = site.entries | where: "slug", page.slug | first -%}
+
+{% if entry %}<aside>
+	<p> There is an entry associated with this topic: <a class="local" href="{{ entry.url | prepend: site.baseurl }}">{% include title.html of=entry %}</a>
+</aside>{% endif -%}

@@ -1,0 +1,1 @@
+{% assign collection = site.collections | where: "label", include.of.collection | first %}{% if collection and collection.title %}{{ collection.title }}: {% endif %}{% if include.full %}{{ include.of.title }}{% else %}{{ include.of.shorttitle | default: include.of.title }}{% endif -%}

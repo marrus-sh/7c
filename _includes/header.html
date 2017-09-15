@@ -1,0 +1,14 @@
+{% assign links = "" | split: "" -%}
+{% for slug in site.sitelinks -%}
+	{% assign link = site.general | where: "slug", slug | first -%}
+	{% if link %}{% assign links = links | push: link %}{% endif -%}
+{% endfor -%}
+
+<header>{% if links.size > 0 %}
+	<nav>{% for link in links %}
+		<a class="sitelink" href="{{ link.url | prepend: site.baseurl }}" {% if link.shorttitle %}title="{{ link.title }}"{% endif %}>{{ link.shorttitle | default: link.title }}</a>{% endfor %}
+	</nav>{% endif %}
+	<a class="top" href="{{ '/' | prepend: site.baseurl }}" title="{{ site.title | site.github.repository_name }}">
+		<h1>{{ site.title | default: site.github.repository_name }}</h1>
+	</a>
+</header>{% comment %} (Strip trailing whitespace) {% endcomment -%}

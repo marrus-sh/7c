@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+{% include meta.html %}
+
+{% include header.html %}
+
+<main><article>
+
+{% include subheader.html %}
+
+{{ content }}{% comment %} (Ends in newline) {% endcomment %}
+</article></main>
+
+{% include footer.html %}

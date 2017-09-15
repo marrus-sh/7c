@@ -1,0 +1,4 @@
+{% capture title %}{% include title.html of=page full=true %}{% endcapture %}{% unless title == "" %}<header>
+	<h2>{{ title }}</h2>{% if page.subtitle %}
+	<p> {{ page.subtitle }}{% endif %}
+</header>{% endunless -%}

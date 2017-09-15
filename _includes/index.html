@@ -1,0 +1,338 @@
+{% assign a = "" | split: "" -%}
+{% assign b = "" | split: "" -%}
+{% assign c = "" | split: "" -%}
+{% assign d = "" | split: "" -%}
+{% assign e = "" | split: "" -%}
+{% assign f = "" | split: "" -%}
+{% assign g = "" | split: "" -%}
+{% assign h = "" | split: "" -%}
+{% assign i = "" | split: "" -%}
+{% assign j = "" | split: "" -%}
+{% assign k = "" | split: "" -%}
+{% assign l = "" | split: "" -%}
+{% assign m = "" | split: "" -%}
+{% assign n = "" | split: "" -%}
+{% assign o = "" | split: "" -%}
+{% assign p = "" | split: "" -%}
+{% assign q = "" | split: "" -%}
+{% assign r = "" | split: "" -%}
+{% assign s = "" | split: "" -%}
+{% assign t = "" | split: "" -%}
+{% assign u = "" | split: "" -%}
+{% assign v = "" | split: "" -%}
+{% assign w = "" | split: "" -%}
+{% assign x = "" | split: "" -%}
+{% assign y = "" | split: "" -%}
+{% assign z = "" | split: "" -%}
+{% assign ae = "" | split: "" -%}
+{% assign tl = "" | split: "" -%}
+{% assign ao = "" | split: "" -%}
+{% assign other = "" | split: "" -%}
+{% for item in include.of -%}
+{% capture letter %}{{ item.title | slice: 0 | downcase }}{% endcapture -%}
+{% case letter -%}
+{% when 'a' %}{% assign a = a | push: item -%}
+{% when 'b' %}{% assign b = b | push: item -%}
+{% when 'c' %}{% assign c = c | push: item -%}
+{% when 'd' %}{% assign d = d | push: item -%}
+{% when 'e' %}{% assign e = e | push: item -%}
+{% when 'f' %}{% assign f = f | push: item -%}
+{% when 'g' %}{% assign g = g | push: item -%}
+{% when 'h' %}{% assign h = h | push: item -%}
+{% when 'i' %}{% assign i = i | push: item -%}
+{% when 'j' %}{% assign j = j | push: item -%}
+{% when 'k' %}{% assign k = k | push: item -%}
+{% when 'l' %}{% assign l = l | push: item -%}
+{% when 'm' %}{% assign m = m | push: item -%}
+{% when 'n' %}{% assign n = n | push: item -%}
+{% when 'o' %}{% assign o = o | push: item -%}
+{% when 'p' %}{% assign p = p | push: item -%}
+{% when 'q' %}{% assign q = q | push: item -%}
+{% when 'r' %}{% assign r = r | push: item -%}
+{% when 's' %}{% assign s = s | push: item -%}
+{% when 't' %}{% assign t = t | push: item -%}
+{% when 'u' %}{% assign u = u | push: item -%}
+{% when 'v' %}{% assign v = v | push: item -%}
+{% when 'w' %}{% assign w = w | push: item -%}
+{% when 'x' %}{% assign x = x | push: item -%}
+{% when 'y' %}{% assign y = y | push: item -%}
+{% when 'z' %}{% assign z = z | push: item -%}
+{% when 'z' %}{% assign ae = ae | push: item -%}
+{% when 'ƛ' %}{% assign tl = tl | push: item -%}
+{% when 'å' %}{% assign ao = ao | push: item -%}
+{% else %}{% assign other = other | push: item -%}
+{% endcase -%}
+{% endfor -%}
+
+<nav class="index">
+	<a{% if a.size > 0 %} class="index" href="#a"{% endif %}>A</a> |
+	<a{% if b.size > 0 %} class="index" href="#b"{% endif %}>B</a> |
+	<a{% if c.size > 0 %} class="index" href="#c"{% endif %}>C</a> |
+	<a{% if d.size > 0 %} class="index" href="#d"{% endif %}>D</a> |
+	<a{% if e.size > 0 %} class="index" href="#e"{% endif %}>E</a> |
+	<a{% if f.size > 0 %} class="index" href="#f"{% endif %}>F</a> |
+	<a{% if g.size > 0 %} class="index" href="#g"{% endif %}>G</a> |
+	<a{% if h.size > 0 %} class="index" href="#h"{% endif %}>H</a> |
+	<a{% if i.size > 0 %} class="index" href="#i"{% endif %}>I</a> |
+	<a{% if j.size > 0 %} class="index" href="#j"{% endif %}>J</a> |
+	<a{% if k.size > 0 %} class="index" href="#k"{% endif %}>K</a> |
+	<a{% if l.size > 0 %} class="index" href="#l"{% endif %}>L</a> |
+	<a{% if m.size > 0 %} class="index" href="#m"{% endif %}>M</a> |
+	<a{% if n.size > 0 %} class="index" href="#n"{% endif %}>N</a> |
+	<a{% if o.size > 0 %} class="index" href="#o"{% endif %}>O</a> |
+	<a{% if p.size > 0 %} class="index" href="#p"{% endif %}>P</a> |
+	<a{% if q.size > 0 %} class="index" href="#q"{% endif %}>Q</a> |
+	<a{% if r.size > 0 %} class="index" href="#r"{% endif %}>R</a> |
+	<a{% if s.size > 0 %} class="index" href="#s"{% endif %}>S</a> |
+	<a{% if t.size > 0 %} class="index" href="#t"{% endif %}>T</a> |
+	<a{% if u.size > 0 %} class="index" href="#u"{% endif %}>U</a> |
+	<a{% if v.size > 0 %} class="index" href="#v"{% endif %}>V</a> |
+	<a{% if w.size > 0 %} class="index" href="#w"{% endif %}>W</a> |
+	<a{% if x.size > 0 %} class="index" href="#x"{% endif %}>X</a> |
+	<a{% if y.size > 0 %} class="index" href="#y"{% endif %}>Y</a> |
+	<a{% if z.size > 0 %} class="index" href="#z"{% endif %}>Z</a> |
+	<a{% if ae.size > 0 %} class="index" href="#ae"{% endif %}>Æ</a> |
+	<a{% if tl.size > 0 %} class="index" href="#tl"{% endif %}>Λ̷</a> |
+	<a{% if ao.size > 0 %} class="index" href="#ao"{% endif %}>Å</a> |
+	<a{% if other.size > 0 %} class="index" href="#other"{% endif %}>#</a>
+</nav>
+
+{% if a.size > 0 %}<nav id="a">
+	{% include heading.html level=3 id="a" text="A" %}
+
+	<ul>{% for item in a %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if b.size > 0 %}<nav id="b">
+	{% include heading.html level=3 id="b" text="B" %}
+
+	<ul>{% for item in b %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if c.size > 0 %}<nav id="c">
+	{% include heading.html level=3 id="c" text="C" %}
+
+	<ul>{% for item in c %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if d.size > 0 %}<nav id="d">
+	{% include heading.html level=3 id="d" text="D" %}
+
+	<ul>{% for item in d %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if e.size > 0 %}<nav id="e">
+	{% include heading.html level=3 id="e" text="E" %}
+
+	<ul>{% for item in e %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if f.size > 0 %}<nav id="f">
+	{% include heading.html level=3 id="f" text="F" %}
+
+	<ul>{% for item in f %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if g.size > 0 %}<nav id="g">
+	{% include heading.html level=3 id="g" text="G" %}
+
+	<ul>{% for item in g %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if h.size > 0 %}<nav id="h">
+	{% include heading.html level=3 id="h" text="H" %}
+
+	<ul>{% for item in h %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if i.size > 0 %}<nav id="i">
+	{% include heading.html level=3 id="i" text="I" %}
+
+	<ul>{% for item in i %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if j.size > 0 %}<nav id="j">
+	{% include heading.html level=3 id="j" text="J" %}
+
+	<ul>{% for item in j %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if k.size > 0 %}<nav id="k">
+	{% include heading.html level=3 id="k" text="K" %}
+
+	<ul>{% for item in k %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if l.size > 0 %}<nav id="l">
+	{% include heading.html level=3 id="l" text="L" %}
+
+	<ul>{% for item in l %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if m.size > 0 %}<nav id="m">
+	{% include heading.html level=3 id="m" text="M" %}
+
+	<ul>{% for item in m %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if n.size > 0 %}<nav id="n">
+	{% include heading.html level=3 id="n" text="N" %}
+
+	<ul>{% for item in n %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if o.size > 0 %}<nav id="o">
+	{% include heading.html level=3 id="o" text="O" %}
+
+	<ul>{% for item in o %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if p.size > 0 %}<nav id="p">
+	{% include heading.html level=3 id="p" text="P" %}
+
+	<ul>{% for item in p %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if q.size > 0 %}<nav id="q">
+	{% include heading.html level=3 id="q" text="Q" %}
+
+	<ul>{% for item in q %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if r.size > 0 %}<nav id="r">
+	{% include heading.html level=3 id="r" text="R" %}
+
+	<ul>{% for item in r %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if s.size > 0 %}<nav id="s">
+	{% include heading.html level=3 id="s" text="S" %}
+
+	<ul>{% for item in s %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if t.size > 0 %}<nav id="t">
+	{% include heading.html level=3 id="t" text="T" %}
+
+	<ul>{% for item in t %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if u.size > 0 %}<nav id="u">
+	{% include heading.html level=3 id="u" text="U" %}
+
+	<ul>{% for item in u %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if v.size > 0 %}<nav id="v">
+	{% include heading.html level=3 id="v" text="V" %}
+
+	<ul>{% for item in v %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if w.size > 0 %}<nav id="w">
+	{% include heading.html level=3 id="w" text="W" %}
+
+	<ul>{% for item in w %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if x.size > 0 %}<nav id="x">
+	{% include heading.html level=3 id="x" text="X" %}
+
+	<ul>{% for item in x %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if y.size > 0 %}<nav id="y">
+	{% include heading.html level=3 id="y" text="Y" %}
+
+	<ul>{% for item in y %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if z.size > 0 %}<nav id="z">
+	{% include heading.html level=3 id="z" text="Z" %}
+
+	<ul>{% for item in z %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if ae.size > 0 %}<nav id="ae">
+	{% include heading.html level=3 id="ae" text="Æ" %}
+
+	<ul>{% for item in ae %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if tl.size > 0 %}<nav id="tl">
+	{% include heading.html level=3 id="tl" text="Λ̷" %}
+
+	<ul>{% for item in tl %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if ao.size > 0 %}<nav id="ao">
+	{% include heading.html level=3 id="ao" text="Å" %}
+
+	<ul>{% for item in ao %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
+
+{% if other.size > 0 %}<nav id="other">
+	{% include heading.html level=3 id="other" text="#" %}
+
+	<ul>{% for item in other %}
+		<li> <a class="local" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>{% endfor %}
+	</ul>
+</nav>{% endif %}
