@@ -5,4 +5,4 @@
 {% endfor -%}
 {% assign topics = topics | sort_natural: "title" -%}
 
-{% if topics.size > 0 %}<footer id="topics">{% for topic in topics %}<a class="local topic" href="{{ topic.url | prepend: site.baseurl }}">#{{ topic.title }}{% comment %} Note: We DON'T want to use title.html here. {% endcomment %}</a>{% endfor %}</footer>{% endif -%}
+{% if topics.size > 0 %}<footer><nav id="topics">{% for topic in topics %}<a class="local topic" href="{{ topic.url | prepend: site.baseurl }}">#{{ topic.title }}{% comment %} Note: We DON'T want to use title.html here. {% endcomment %}</a>{% endfor %}</nav></footer>{% endif -%}

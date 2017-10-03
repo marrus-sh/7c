@@ -4,19 +4,32 @@ slug: introduction
 title: Introduction to the Encyclopædia
 ---
 
+<p>
+	It is recommended that you view this site in <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>, as it tends to have the best non-Western language support and localization features.
+	However, it should run comfortably in any browser.
+
 <section id="features">
 	{% include heading.html level=3 section="features" text="Principal features" %}
 
 	<section id="text">
 		{% include heading.html level=4 section="text" text="Main text" %}
+
+		<p>
+			This text is a continual work-in-progress.
+			At this moment, it contains <b>{% if site.entries.size > 10000 %}{{ site.entries.size | divided_by: 1000 }} {{ site.entries.size | modulo: 1000 }}{% else %}{{ site.entries | size }}{% endif %}</b> entries categorized into <b>{% if site.topics.size > 10000 %}{{ site.topics.size | divided_by: 1000 }} {{ site.topics.size | modulo: 1000 }}{% else %}{{ site.topics | size }}{% endif %}</b> topics.
+			As the Sevensi language and culture are under constant development, these numbers are likely to increase in the future.
 	</section>
 
 	<section id="navigation">
 		{% include heading.html level=4 section="navigation" text="Navigational aids" %}
-	</section>
 
-	<section id="supplements">
-		{% include heading.html level=4 section="supplements" text="Supplementary materials" %}
+		<p>
+			The {% include link.html from=site.general of="index" %} page provide a simple and easy means of locating the article you are looking for—if you already know its title.
+			However, for more general browsing, the {% include link.html from=site.general of="topics" %} page is likely to be of more use, as it collects multiple pages on a particular topic together.
+			Finally, the {% include link.html from=site.general of="guide" %} provides a comprehensive overview for newcomers of the various areas of knowledge this encyclopædia offers.
+		<p>
+			In addition to these broad features, each entry also comes equipped with a <i>Related entries</i> section and is extensively hyperlinked.
+			Consequently, once a reader finds themselves on an article associated with their topic, it is not hard to gather more information about the various concepts or ideas discussed.
 	</section>
 </section>
 
@@ -66,6 +79,18 @@ title: Introduction to the Encyclopædia
 	<section id="dates">
 		{% include heading.html level=4 section="dates" text="Dates" %}
 
-		<aside>To come.</aside>
+		<aside>Information on Sevensi dates to come.</aside>
+	</section>
+
+	<section id="encoding">
+		{% include heading.html level=4 section="encoding" text="Fonts and encoding" %}
+
+		<p>
+			The Sevensi script is encoded into the Unicode Private-Use Area via the <a href="https://github.com/langdev-project/langdev-unicode"><cite>LANGDEV in Unicode</cite></a> specification.
+			However, without proper rendering support, you may see question marks, boxes, or other symbols instead of Sevensi characters.
+			The <a href="https://github.com/langdev-project/unifont-langdev"><cite>Unifont LANGDEV</cite></a> font may be used to provide preliminary Sevensi character support.
+		<p>
+			This site is designed to use the fonts <a href="http://junicode.sourceforge.net/"><cite>Junicode</cite></a> and <a href="http://adobe-fonts.github.io/source-sans-pro/"><cite>Source Sans Pro</cite></a>, and will take advantage of them if they are installed on your computer.
+			However, if they are not found it will fallback to your browser's default serif and sans-serif fonts rather than attempt a download.
 	</section>
 </section>
